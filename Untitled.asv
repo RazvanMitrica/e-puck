@@ -1,0 +1,27 @@
+i=0;
+vit = 0;
+ok=1;
+[ePic] = updateDef(ePic, propName, value);
+while i<1001
+    i=i+1;
+    prox = get(epic,'proxi');
+    if (prox(8)>10)
+        prox(8)
+    end
+    if((prox(1)>20 || prox(8)>20) && ok ==1)
+        vit=-vit;
+        ok = 0;
+    end
+    epic = set(epic,'speed',[vit,vit]);
+    epic = update(epic);
+    if((prox(4)>50 || prox(5)>50) && ok ==0)
+        vit=-vit;
+        ok = 1;
+    end
+    epic = set(epic,'speed',[vit,vit]);
+    epic = update(epic);
+    pause(0.001);
+end
+
+
+%epic = disconnect(epic);
